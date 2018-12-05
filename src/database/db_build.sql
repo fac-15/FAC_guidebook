@@ -19,14 +19,14 @@ CREATE TABLE users (
 -- Third table: Posts // Consider NOT NULL for the user_id
 CREATE TABLE posts (
   id SERIAL PRIMARY KEY,
-  user_id INTEGER REFERENCES users(id), 
+  user_id INTEGER REFERENCES users(id),
   text TEXT NOT NULL,
   restaurant_id INTEGER REFERENCES restaurants(id)
 );
 
 -- Fourth table: Comments
 CREATE TABLE comments (
-  id SERIAL PRIMARY KEY, 
+  id SERIAL PRIMARY KEY,
   user_id INTEGER REFERENCES users(id),
   post_id INTEGER REFERENCES posts(id),
   text TEXT NOT NULL,
