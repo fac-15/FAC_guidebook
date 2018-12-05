@@ -4,9 +4,15 @@ BEGIN;
 CREATE TABLE restaurants (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
+<<<<<<< HEAD
   location VARCHAR(300) NOT NULL
   -- img_url VARCHAR(300)
   -- "https://cdn2.iconfinder.com/data/icons/map-locations-filled-pixel-perfect/64/pin-map-location-19-512.png"
+=======
+  location VARCHAR(300) NOT NULL,
+  img_url VARCHAR(200) 
+  -- DEFAULT "https://cdn2.iconfinder.com/data/icons/map-locations-filled-pixel-perfect/64/pin-map-location-19-512.png"
+>>>>>>> ac381e517c76ce320d93dd0e5113e8abdcce3cdb
 );
 
 -- Second table: Users
