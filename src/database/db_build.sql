@@ -15,7 +15,16 @@ CREATE TABLE users (
   github_username VARCHAR(100) NOT NULL,
   name VARCHAR(100) NOT NULL
 );
--- Third table: Posts
+
+-- Third table: Posts // Consider NOT NULL for the user_id
+CREATE TABLE posts(
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id), 
+  text TEXT NOT NULL,
+  restaurant_id INTEGER REFERENCES restaurants(id)
+);
+
+
 -- Forth table: Comments
 
 COMMIT;
