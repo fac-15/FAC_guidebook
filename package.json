@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/fac-15/FAC_guidebook/issues"
   },
-  "homepage": "https://github.com/fac-15/FAC_guidebook#readme"
+  "homepage": "https://github.com/fac-15/FAC_guidebook#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
 }
