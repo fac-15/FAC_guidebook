@@ -1,0 +1,20 @@
+{
+  "name": "FAC_guidebook",
+  "version": "1.0.0",
+  "description": "## User Stories",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-15/FAC_guidebook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac-15/FAC_guidebook/issues"
+  },
+  "homepage": "https://github.com/fac-15/FAC_guidebook#readme"
+}
