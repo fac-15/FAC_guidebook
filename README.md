@@ -19,6 +19,14 @@ As a user I want to be able to:
 
 <img src='https://user-images.githubusercontent.com/16784959/49526129-1926cc00-f8a7-11e8-92bc-2d746b529dc1.jpg' width="700" height="700">
 <img src='https://user-images.githubusercontent.com/36998110/49519226-6fd8d980-f898-11e8-946e-27cb23364835.JPG' width="700" height="700">
+<img src='https://user-images.githubusercontent.com/16784959/49577817-2e036e00-f940-11e8-8186-ed1fa937536b.jpg' width="700" height="700">
+
+## What we learned: Day 1: 
+
+- How to reference primary keys and foreign keys
+- SQL files are grey in Github! 
+<img width="1094" alt="screenshot 2018-12-06 at 10 15 49" src="https://user-images.githubusercontent.com/16784959/49577870-525f4a80-f940-11e8-9344-c34fd939ef90.png">
+
 
 
 ### Notes
