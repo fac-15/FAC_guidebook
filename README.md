@@ -1,5 +1,7 @@
 # FAC_guidebook
 
+[![Build Status](https://travis-ci.org/fac-15/FAC_guidebook.svg?branch=staging)](https://travis-ci.org/fac-15/FAC_guidebook)
+
 ## User Stories 
 
 As a user I want to be able to: 
