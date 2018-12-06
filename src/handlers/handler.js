@@ -24,12 +24,13 @@ const handlerHome = (request, response) => {
 // ----------------------PUBLIC ROUTE ------------
 const handlerPublic = (request, response, url) => {
   console.log(`requesting the public route, url: ${url}`);
-  const extension = url.split('.')[1];
+  const extension = url.split(".")[1];
   const extensionType = {
-    html: 'text/html',  
-    css: 'text/css',
-    js: 'application/javascript',
-  }
+    html: "text/html",
+    css: "text/css",
+    js: "application/javascript"
+  };
+
 
   const filePath = path.join(__dirname, "..", "..", url);
   fs.readFile(filePath, (error, file) => {
@@ -44,7 +45,7 @@ const handlerPublic = (request, response, url) => {
   });
 };
 
-    const handlerRestaurants = (request, response) => {
+  const handlerRestaurants = (request, response) => {
         getData((err, res) => {
           if (err) {
             return console.log(err, "error");
@@ -54,9 +55,6 @@ const handlerPublic = (request, response, url) => {
           response.end(restaurantsData);
         });
     }
-
-
-
 
 module.exports = {
   handlerHome,
