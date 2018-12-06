@@ -26,7 +26,7 @@ const handlerPublic = (request, response, url) => {
   console.log(`requesting the public route, url: ${url}`);
   const extension = url.split('.')[1];
   const extensionType = {
-    html: 'text/html',
+    html: 'text/html',  
     css: 'text/css',
     js: 'application/javascript',
   }
