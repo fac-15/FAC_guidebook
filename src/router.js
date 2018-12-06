@@ -5,7 +5,7 @@ const router = (req, res) => {
   
 // ****************************POST METHOD********************
   if (req.method == 'POST') {
-    handler.handlerSubmit(req);
+    handler.handlerSubmit(req, res);
 } 
 // *******************GET METHOD***********************
 else {
@@ -13,7 +13,9 @@ else {
     handler.handlerHome(req, res);
   } else if (url === '/restaurants') {
     handler.handlerRestaurants(req, res);
-  } else if (url.indexOf("public") !== -1) {
+  } else if (url === '/users'){
+    handler.handlerUsers(req, res);
+  }else if (url.indexOf("public") !== -1) {
     handler.handlerPublic(req, res, url);
   } else {
     res.writeHead(404, { "Content-Type": "text/html" });
