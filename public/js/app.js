@@ -11,7 +11,7 @@ var recsList = document.getElementById("recsList");
 const displayData = display => {
   console.log("display data is running from inside fetchdata");
   display.forEach(function(rec) {
-    let item = document.createElement("li");
+    let item = document.createElement("p");
     item.textContent = rec.name;
     recsList.appendChild(item);
   });

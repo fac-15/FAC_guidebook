@@ -5,6 +5,58 @@
 
 
 h1 {
-    text-align: center;
+	text-align: center;
+	padding: 2em;
+	font-family: 'Bungee', cursive;
+}
+
+#recommendations{
+	display: flex;
+}
+
+#recsList{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	align-content: center;
+}
+
+#recsList p {
+	border: 1px black solid;
+	display: grid;
+	grid-template-columns: 40px 50px;
+	grid-template-rows: 25% 100px;
+	grid-column-start: 2;
+}
+
+
+p{
+	/* display: flex;
+	flex-wrap: wrap; */
+	padding: .3em;
+	font-size: 1.5em;
+	/* align-content: center; */
+}
+
+#myButton{
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	border: none;
+	width: 10em;
+	height: 10em;
+	border-radius: 50%;
+	font-size: 1em;
+}
+
+#myButton:hover{
+	background-color: greenyellow;
+}
+
+h2{
+	text-align: center;
+	padding: 2em;
+	font-family: 'Bungee', cursive;
 }
 
