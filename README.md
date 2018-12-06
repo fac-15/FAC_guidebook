@@ -58,3 +58,6 @@ How to run multiple test files:
 "test": "node src/test/test_server.js | tap-spec && NODE_ENV=test node src/test/test_db.js | tap-spec",
 ```
 We tried many difficult, long-winded different things...
+
+TRYING TO ADD A NEW COLUMN TO A TABLE
+ we tried to add a review column to our restaurant table... didn't seem to work! why!!!
