@@ -8,12 +8,20 @@ var recsList = document.getElementById("recsList");
 // });
 // };
 
+const createTag = (tag, value) => {
+  let item = document.createElement(tag);
+  item.textContent = value;
+  return item;
+};
+
 const displayData = display => {
   console.log("display data is running from inside fetchdata");
+  console.log(display);
   display.forEach(function(rec) {
-    let item = document.createElement("li");
-    item.textContent = rec.name;
-    recsList.appendChild(item);
+    let li = document.createElement("li");
+    recsList.appendChild(li);
+    li.appendChild(createTag("h2", rec.name));
+    li.appendChild(createTag("p", rec.location));
   });
 };
 
