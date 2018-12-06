@@ -50,3 +50,11 @@ IN DB_BUILD.JS - if you still have:
 ```
 
 does this mean that you can't export the dbBuilder function? (and therefore can't require it in your tests eventually)? this seemed to be the case 
+
+TEST SCRIPT IN JSON:
+How to run multiple test files: 
+
+```
+"test": "node src/test/test_server.js | tap-spec && NODE_ENV=test node src/test/test_db.js | tap-spec",
+```
+We tried many difficult, long-winded different things...
