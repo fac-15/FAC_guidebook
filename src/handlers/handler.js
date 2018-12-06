@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const request = require("request");
+const getData = require('./getData');
 
 // ----------------------HOME ROUTE ------------also displays existing recommendations from DB----
 const handlerHome = (request, response) => {
@@ -43,10 +44,22 @@ const handlerPublic = (request, response, url) => {
   });
 };
 
+    const handlerRestaurants = (request, response) => {
+        getData((err, res) => {
+          if (err) {
+            return console.log(err, "error");
+          }
+          const restaurantsData = JSON.stringify(res);
+          response.writeHead(200, {'Content-Type': 'application/json'});
+          response.end(restaurantsData);
+        });
+    }
+
 
 
 
 module.exports = {
   handlerHome,
-  handlerPublic
+  handlerPublic,
+  handlerRestaurants
 };
