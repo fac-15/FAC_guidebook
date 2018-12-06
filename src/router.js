@@ -4,6 +4,8 @@ const router = (req, res) => {
   const url = req.url;
   if (url === "/") {
     handler.handlerHome(req, res);
+  } else if (url === '/restaurants') {
+    handler.handlerRestaurants(req, res);
   } else if (url.indexOf("public") !== -1) {
     handler.handlerPublic(req, res, url);
   } else {
