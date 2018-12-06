@@ -1,5 +1,7 @@
 BEGIN;
 
+DROP TABLE IF EXISTS restaurants, users, posts, comments CASCADE;
+
 -- First table: Restaurants
 CREATE TABLE restaurants (
   id SERIAL PRIMARY KEY,
