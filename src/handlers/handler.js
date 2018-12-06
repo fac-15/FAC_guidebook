@@ -2,7 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const request = require("request");
 const getData = require('./getData');
+const postData = require('./postData');
 const qs = require('querystring');
+
 
 // ----------------------HOME ROUTE ------------also displays existing recommendations from DB----
 const handlerHome = (request, response) => {
@@ -56,7 +58,7 @@ const handlerPublic = (request, response, url) => {
         });
     }
 // ----------------------POST ROUTER------------
-  const handlerSubmit = (req) => {
+  const handlerSubmit = (req, res) => {
         var body = '';
         req.on('data', function (data) {
             body += data;
@@ -69,6 +71,13 @@ const handlerPublic = (request, response, url) => {
             var post = qs.parse(body);
             // use post['blah'], etc.
             console.log(post.address);
+            postData(post.placeName, post.address, (err, response) => {
+              if(err){
+                return console.log(err, 'Error posting data');
+              }
+              res.end();
+              
+            })
   });
 };
 

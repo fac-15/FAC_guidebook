@@ -5,7 +5,7 @@ const router = (req, res) => {
   
 // ****************************POST METHOD********************
   if (req.method == 'POST') {
-    handler.handlerSubmit(req);
+    handler.handlerSubmit(req, res);
 } 
 // *******************GET METHOD***********************
 else {
