@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/fac-15/FAC_guidebook#readme",
   "devDependencies": {
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.18.7",
+    "supertest": "^3.3.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
   }
 }
