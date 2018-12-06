@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const request = require("request");
 const getData = require('./getData');
+const qs = require('querystring');
 
 // ----------------------HOME ROUTE ------------also displays existing recommendations from DB----
 const handlerHome = (request, response) => {
@@ -31,7 +32,6 @@ const handlerPublic = (request, response, url) => {
     js: "application/javascript"
   };
 
-
   const filePath = path.join(__dirname, "..", "..", url);
   fs.readFile(filePath, (error, file) => {
     if (error) {
@@ -55,9 +55,26 @@ const handlerPublic = (request, response, url) => {
           response.end(restaurantsData);
         });
     }
+// ----------------------POST ROUTER------------
+  const handlerSubmit = (req) => {
+        var body = '';
+        req.on('data', function (data) {
+            body += data;
+            // Too much POST data, kill the connection!
+            // 1e6 === 1 * Math.pow(10, 6) === 1 * 1000000 ~~~ 1MB
+            if (body.length > 1e6)
+                req.connection.destroy();
+        });
+        req.on('end', function () {
+            var post = qs.parse(body);
+            // use post['blah'], etc.
+            console.log(post.address);
+  });
+};
 
 module.exports = {
   handlerHome,
   handlerPublic,
-  handlerRestaurants
+  handlerRestaurants,
+  handlerSubmit
 };
