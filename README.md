@@ -38,3 +38,15 @@ id SERIAL PRIMARY KEY
 
 POSTS TABLE
 user_id INTEGER REFERENCES users(id)
+
+
+CREATE DATABASE - it will automatically turn any upper case chars into lower case!!! So you may need to go and change that in your config.env
+
+IN DB_BUILD.JS - if you still have:
+
+```dbConnection.end(() => {
+//         console.log("connection closed");
+//       });
+```
+
+does this mean that you can't export the dbBuilder function? (and therefore can't require it in your tests eventually)? this seemed to be the case 
