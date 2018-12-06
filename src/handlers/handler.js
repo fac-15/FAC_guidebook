@@ -48,7 +48,7 @@ const handlerPublic = (request, response, url) => {
 };
 
   const handlerRestaurants = (request, response) => {
-        getData((err, res) => {
+        getData.getRestData((err, res) => {
           if (err) {
             return console.log(err, "error");
           }
@@ -57,6 +57,18 @@ const handlerPublic = (request, response, url) => {
           response.end(restaurantsData);
         });
     }
+
+
+  const handlerUsers = (request, response) => {
+    getData.getUserData((err, res) => {
+      if (err) {
+        return console.log(err, "error");
+      }
+      const userData = JSON.stringify(res);
+      response.writeHead(200, {'Content-Type': 'application/json'});
+      response.end(userData);
+    });
+}
 // ----------------------POST ROUTER------------
   const handlerSubmit = (req, res) => {
         var body = '';
@@ -64,16 +76,23 @@ const handlerPublic = (request, response, url) => {
             body += data;
             // Too much POST data, kill the connection!
             // 1e6 === 1 * Math.pow(10, 6) === 1 * 1000000 ~~~ 1MB
-            if (body.length > 1e6)
-                req.connection.destroy();
+            // if (body.length > 1e6)
+            //     req.connection.destroy();
         });
         req.on('end', function () {
             var post = qs.parse(body);
             // use post['blah'], etc.
             console.log(post.address);
-            postData(post.placeName, post.address, (err, response) => {
+            postData.postDataRest(post.placeName, post.address, (err, response) => {
               if(err){
-                return console.log(err, 'Error posting data');
+                return console.log(err, 'Error posting rest data');
+              }
+              res.end();
+              
+            })
+            postData.postDataUser(post.userName, post.githubUsername, (err, response) => {
+              if(err){
+                return console.log(err, 'Error posting user data');
               }
               res.end();
               
@@ -85,5 +104,6 @@ module.exports = {
   handlerHome,
   handlerPublic,
   handlerRestaurants,
-  handlerSubmit
+  handlerSubmit,
+  handlerUsers
 };
