@@ -1,6 +1,6 @@
 const databaseConnection = require('../database/db_connection');
 
-const postData = (name, location, cb) => {
+const postDataRest = (name, location, cb) => {
     databaseConnection.query(
         'INSERT INTO restaurants (name, location) VALUES ($1, $2)',
         [name, location],
@@ -14,4 +14,24 @@ const postData = (name, location, cb) => {
     );
 };
 
-module.exports = postData;
+const postDataUser = (name, github_username, cb) => {
+    databaseConnection.query(
+        'INSERT INTO users (name, github_username) VALUES ($1, $2)',
+        [name, github_username],
+        (err, res) => {
+            if(err) {
+                return cb(err);
+            } else {
+                cb(null, res);
+            }
+        }
+    );
+};
+
+
+
+
+module.exports = {
+    postDataRest,
+    postDataUser
+}

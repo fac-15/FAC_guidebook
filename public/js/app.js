@@ -22,4 +22,4 @@ fetchData(displayData);
 // window.addEventListener("load", displayRecommendations);
 /// call request functions
 
-// display data
+// displ// dis
