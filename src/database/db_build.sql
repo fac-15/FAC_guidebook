@@ -7,9 +7,8 @@ CREATE TABLE restaurants (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   location VARCHAR(300) NOT NULL,
-  review VARCHAR(500) NOT NULL
-  -- img_url VARCHAR(300)
-  -- "https://cdn2.iconfinder.com/data/icons/map-locations-filled-pixel-perfect/64/pin-map-location-19-512.png"
+  review VARCHAR(500) NOT NULL,
+  img_url VARCHAR(500)
 );
 
 -- Second table: Users
@@ -37,12 +36,18 @@ CREATE TABLE comments (
 );
 
 -- Insert restaurants data
-INSERT INTO restaurants (name, location, review) VALUES
+INSERT INTO restaurants (name, location, review, img_url) VALUES
 (
-  'The Faltering Fullback', '19 Perth Rd, Stroud Green, London N4 3HB', 'Awesome!'
+  'The Faltering Fullback', 
+  '19 Perth Rd, Stroud Green, London N4 3HB', 
+  'The pub is really cosy! The backyard is really cool. They also sell food (which was actually not that great...)',
+  'http://falteringfullback.com/sites/default/files/slides/BACK-BAR-AT-NIGHT.jpg'
 ),
 (
-  'Yard Sale Pizza', '54 Blackstock Rd, London N4 2DW', 'Pretty good'
+  'Dotori', 
+  '3 Stroud Green Rd, London N4 2DQ', 
+  'Five star food. Five star service. Impressed by their enthusiasm. Will definitely come back again. Make sure you order your food through the most adorable manager ever and I am sure you will like him',
+  'https://www.squaremeal.co.uk/~/media/Images/Restaurants/_DEF/Dotori/Dotori-2017-WEB.jpg'
 );
 
 COMMIT;
