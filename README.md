@@ -68,7 +68,15 @@ An environment variable!
         });
         res.end();
    ```
-2.
+2. Security vulnerability: script injections!
+
+   How we fixed (maybe?):
+   ```
+   <input pattern="^[^<>]+$"......./>
+   ```
+3. Would be nice to display the review of the restaurant to the user?
+
+   How we fixed: Just handled that data. Did the same for image url!
 
 
 ## Stretch goals: ⚽
