@@ -39,7 +39,7 @@ party 👽
 
 - How to reference primary keys and foreign keys
 ```
-USER TABLE
+USERS TABLE
 id SERIAL PRIMARY KEY
 
 POSTS TABLE
