@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Add a recommendation</title>
     <link rel="stylesheet" type="text/css" href="./form.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Text+Me+One" rel="stylesheet">
 </head>
 <body>
             
@@ -17,14 +18,16 @@
   
           <ul class="form-style-1">
             <h2>Recommended place</h2>
-            <li><label for ="name-of-place">Name of place</label><input name='placeName' type='text' id ="name-of-place" placeholder="Enter name of recommendation here" required/> </li>
+            <li><label for ="name-of-place">Name of place</label><input name='placeName' type='text' id ="name-of-place" class ="field-long" placeholder="Enter name of recommendation here" required/> </li>
             <li> <label for ="address">Address</label> <input name='address' type='text' id="address" class ="field-long" placeholder="Where is it?" required></li>
-            <li><label for ="review">Review</label><textarea name='review' id = "review" placeholder="Tell us why you are recommending this place.." class = "field-long field-textarea" required></textarea></li>
-            <li> <label for ="image-url">Image url</label> <input name='imageUrl'type='url' src="" id="image-url" placeholder="Paste image link here"></li>
-  
+            <li><label for ="review">Review</label><textarea name='review' id = "review" class ="field-long" placeholder="Tell us why you are recommending this place.." class = "field-long field-textarea" required></textarea></li>
+            <li> <label for ="image-url">Image url</label> <input name='imageUrl'type='url' src="" id="image-url" class ="field-long" placeholder="Paste image link here"></li>
+            <br>
+
             <h2>Your name</h2>
-            <li><label for ="name-of-user">Name</label><input name='userName' type='text' id="name-of-user" placeholder="Type your name here" required/> </li>
-            <li><label for ="github-username">Github username</label><input name='githubUsername' type='text' id ="github-username" placeholder="Enter your github username" required/> </li>
+            
+            <li><label for ="name-of-user">Name</label><input name='userName' type='text' id="name-of-user" class ="field-long" placeholder="Type your name here" required/> </li>
+            <li><label for ="github-username">Github username</label><input name='githubUsername' type='text' id ="github-username" class ="field-long" placeholder="Enter your github username" required/> </li>
             <li><input type="submit" value= "submit"></li>
           </ul>
         </form>
