@@ -1,9 +1,9 @@
 const databaseConnection = require('../database/db_connection');
 
-const postDataRest = (name, location, review, cb) => {
+const postDataRest = (name, location, review, img_url, cb) => {
     databaseConnection.query(
-        'INSERT INTO restaurants (name, location, review) VALUES ($1, $2, $3)',
-        [name, location, review],
+        'INSERT INTO restaurants (name, location, review, img_url) VALUES ($1, $2, $3, $4)',
+        [name, location, review, img_url],
         (err, res) => {
             if(err) {
                 return cb(err);
