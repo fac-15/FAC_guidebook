@@ -22,6 +22,7 @@ const displayData = display => {
     recsList.appendChild(li);
     li.appendChild(createTag("h2", rec.name));
     li.appendChild(createTag("p", rec.location));
+    li.appendChild(createTag("p", rec.review));
   });
 };
 

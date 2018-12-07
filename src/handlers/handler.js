@@ -82,8 +82,8 @@ const handlerPublic = (request, response, url) => {
         req.on('end', function () {
             var post = qs.parse(body);
             // use post['blah'], etc.
-            console.log(post.address);
-            postData.postDataRest(post.placeName, post.address, (err, response) => {
+            console.log(post);
+            postData.postDataRest(post.placeName, post.address, post.review, (err, response) => {
               if(err){
                 return console.log(err, 'Error posting rest data');
               }

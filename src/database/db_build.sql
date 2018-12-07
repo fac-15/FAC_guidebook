@@ -6,7 +6,8 @@ DROP TABLE IF EXISTS restaurants, users, posts, comments CASCADE;
 CREATE TABLE restaurants (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
-  location VARCHAR(300) NOT NULL
+  location VARCHAR(300) NOT NULL,
+  review VARCHAR(500) NOT NULL
   -- img_url VARCHAR(300)
   -- "https://cdn2.iconfinder.com/data/icons/map-locations-filled-pixel-perfect/64/pin-map-location-19-512.png"
 );
@@ -36,12 +37,12 @@ CREATE TABLE comments (
 );
 
 -- Insert restaurants data
-INSERT INTO restaurants (name, location) VALUES
+INSERT INTO restaurants (name, location, review) VALUES
 (
-  'The Faltering Fullback', '19 Perth Rd, Stroud Green, London N4 3HB'
+  'The Faltering Fullback', '19 Perth Rd, Stroud Green, London N4 3HB', 'Awesome!'
 ),
 (
-  'Yard Sale Pizza', '54 Blackstock Rd, London N4 2DW'
+  'Yard Sale Pizza', '54 Blackstock Rd, London N4 2DW', 'Pretty good'
 );
 
 COMMIT;
