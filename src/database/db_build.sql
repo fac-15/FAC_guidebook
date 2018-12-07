@@ -46,7 +46,7 @@ INSERT INTO restaurants (name, location, review, img_url) VALUES
 (
   'Dotori', 
   '3 Stroud Green Rd, London N4 2DQ', 
-  'Five star food. Five star service. Impressed by their enthusiasm. Will definitely come back again. Make sure you order your food through the most adorable manager ever and I am sure you will like him',
+  'Five star food. Five star service. Impressed by their enthusiasm. Will definitely come back again.',
   'https://www.squaremeal.co.uk/~/media/Images/Restaurants/_DEF/Dotori/Dotori-2017-WEB.jpg'
 );
 
