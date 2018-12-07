@@ -40,3 +40,8 @@ fetchData(displayData);
 /// call request functions
 
 // displ// dis
+
+// ***********ARROW BUTTON*******
+document.querySelector('.fas').addEventListener('click', function(){
+  
+})
