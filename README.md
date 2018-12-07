@@ -13,9 +13,12 @@ As a user I want to be able to:
 ## How to run our project
 
 npm i 
+
 npm test to see tests if you're into that
 
+
 npm start to run server 
+
 open localhost:5000
 
 party
