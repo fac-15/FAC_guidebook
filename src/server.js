@@ -3,7 +3,7 @@ const router = require('./router.js');
 
 const server = http.createServer(router);
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5000;
 
 const startServer = () => {
     server.listen(port, () => {
