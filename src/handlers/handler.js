@@ -85,6 +85,7 @@ const handlerSubmit = (req, res) => {
       post.placeName,
       post.address,
       post.review,
+      post.imageUrl,
       (err, response) => {
         if (err) {
           return console.log(err, "Error posting rest data");
