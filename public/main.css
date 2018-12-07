@@ -6,9 +6,14 @@
 h1 {
 	text-align: center;
 	padding: 2em;
+	font-size: 3em;
 	font-family: 'Bungee', cursive;
 	background-color: #F5B871;
 }
+h2 {
+	font-size: 2em;
+}
+
 
 #recommendations{
 	display: flex;
