@@ -42,6 +42,16 @@ party 👽
 <img width="1094" alt="screenshot 2018-12-06 at 10 15 49" src="https://user-images.githubusercontent.com/16784959/49577870-525f4a80-f940-11e8-9344-c34fd939ef90.png">
 
 
+## Issues Raised:
+1. Should redirect back to homepage after submitting form.
+   How we fixed: 
+   ```
+   res.writeHead(302, {
+          Location: "http://localhost:5000"
+        });
+        res.end();
+   ```
+
 
 ### Notes
 
