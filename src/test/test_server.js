@@ -19,6 +19,18 @@ tape("test if home route is being served", t => {
     });
 });
 
+tape("test if form route is being served", t => {
+  supertest(router)
+    .get("/public/form.html")
+    .expect(200)
+    .expect("Content-type", /html/)
+    .end((err, res) => {
+      t.error(err);
+      t.equal(res.statusCode, 200, "Should return 200");
+      t.end();
+    });
+});
+
 tape("Invalid url returns 404 status code", t => {
   supertest(router)
     .get("/wioejfojw")
