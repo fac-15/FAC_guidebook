@@ -17,9 +17,9 @@ h1 {
 #recsList{
 	display: grid;
 	grid-template-columns: 25vw 25vw 25vw;
-	grid-template-rows: 25vw 25vw 25vw;
+	grid-template-rows: 43vw 43vw 43vw;
 	width: 100vw;
-	margin: 0 10%;
+	margin: 0 8%;
 	text-align: center;
 }
 
@@ -30,6 +30,7 @@ h1 {
 	opacity: 0.8;
 	border-radius: 8px;
 }
+
 
 ul {
 	list-style: none;
@@ -50,8 +51,10 @@ p{
 	flex-wrap: wrap; */
 	padding: .3em;
 	font-size: 20px;
+	font-family: 'PT Sans', sans-serif;
 	/* align-content: center; */
 }
+
 
 #myButton{
 	margin: 0 auto;
@@ -80,4 +83,5 @@ h2{
 .fas{
 	font-size: 3em;
 	margin-left: 20px;
+	margin-top: 200px;
 }
