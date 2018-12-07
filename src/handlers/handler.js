@@ -1,10 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 const request = require("request");
-const getData = require('./getData');
-const postData = require('./postData');
-const qs = require('querystring');
-
+const getData = require("./getData");
+const postData = require("./postData");
+const qs = require("querystring");
 
 // ----------------------HOME ROUTE ------------also displays existing recommendations from DB----
 const handlerHome = (request, response) => {
@@ -47,56 +46,68 @@ const handlerPublic = (request, response, url) => {
   });
 };
 
-  const handlerRestaurants = (request, response) => {
-        getData.getRestData((err, res) => {
-          if (err) {
-            return console.log(err, "error");
-          }
-          const restaurantsData = JSON.stringify(res);
-          response.writeHead(200, {'Content-Type': 'application/json'});
-          response.end(restaurantsData);
-        });
+const handlerRestaurants = (request, response) => {
+  getData.getRestData((err, res) => {
+    if (err) {
+      return console.log(err, "error");
     }
+    const restaurantsData = JSON.stringify(res);
+    response.writeHead(200, { "Content-Type": "application/json" });
+    response.end(restaurantsData);
+  });
+};
 
-
-  const handlerUsers = (request, response) => {
-    getData.getUserData((err, res) => {
-      if (err) {
-        return console.log(err, "error");
-      }
-      const userData = JSON.stringify(res);
-      response.writeHead(200, {'Content-Type': 'application/json'});
-      response.end(userData);
-    });
-}
+const handlerUsers = (request, response) => {
+  getData.getUserData((err, res) => {
+    if (err) {
+      return console.log(err, "error");
+    }
+    const userData = JSON.stringify(res);
+    response.writeHead(200, { "Content-Type": "application/json" });
+    response.end(userData);
+  });
+};
 // ----------------------POST ROUTER------------
-  const handlerSubmit = (req, res) => {
-        var body = '';
-        req.on('data', function (data) {
-            body += data;
-            // Too much POST data, kill the connection!
-            // 1e6 === 1 * Math.pow(10, 6) === 1 * 1000000 ~~~ 1MB
-            // if (body.length > 1e6)
-            //     req.connection.destroy();
+const handlerSubmit = (req, res) => {
+  var body = "";
+  req.on("data", function(data) {
+    body += data;
+    // Too much POST data, kill the connection!
+    // 1e6 === 1 * Math.pow(10, 6) === 1 * 1000000 ~~~ 1MB
+    // if (body.length > 1e6)
+    //     req.connection.destroy();
+  });
+  req.on("end", function() {
+    var post = qs.parse(body);
+    // use post['blah'], etc.
+    console.log(post);
+    postData.postDataRest(
+      post.placeName,
+      post.address,
+      post.review,
+      (err, response) => {
+        if (err) {
+          return console.log(err, "Error posting rest data");
+        }
+        res.writeHead(302, {
+          Location: "http://localhost:5000"
         });
-        req.on('end', function () {
-            var post = qs.parse(body);
-            // use post['blah'], etc.
-            console.log(post);
-            postData.postDataRest(post.placeName, post.address, post.review, (err, response) => {
-              if(err){
-                return console.log(err, 'Error posting rest data');
-              }
-              res.end();
-              
-            })
-            postData.postDataUser(post.userName, post.githubUsername, (err, response) => {
-              if(err){
-                return console.log(err, 'Error posting user data');
-              }
-              res.end();
-              
-            })
+        res.end();
+      }
+    );
+    postData.postDataUser(
+      post.userName,
+      post.githubUsername,
+      (err, response) => {
+        if (err) {
+          return console.log(err, "Error posting user data");
+        }
+        res.writeHead(302, {
+          Location: "http://localhost:5000"
+        });
+        res.end();
+      }
+    );
   });
 };
 
