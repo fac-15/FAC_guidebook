@@ -41,6 +41,10 @@ li{
 	margin: 10px;
 }
 
+li img {
+	width: 100%;
+}
+
 p{
 	/* display: flex;
 	flex-wrap: wrap; */
