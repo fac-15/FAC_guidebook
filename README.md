@@ -17,6 +17,8 @@ As a user I want to be able to:
 
 ## How to run our project 🎉
 
+clone this repo 
+
 npm i 
 
 npm test to see tests if you're into that (this might not work actually because of authentication)
