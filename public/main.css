@@ -3,11 +3,11 @@
 	padding: 0;
 }
 
-
 h1 {
 	text-align: center;
 	padding: 2em;
 	font-family: 'Bungee', cursive;
+	background-color: #F5B871;
 }
 
 #recommendations{
@@ -15,27 +15,37 @@ h1 {
 }
 
 #recsList{
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	width: 100vw;
-	align-content: center;
-}
-
-#recsList p {
-	border: 1px black solid;
 	display: grid;
-	grid-template-columns: 40px 50px;
-	grid-template-rows: 25% 100px;
-	grid-column-start: 2;
+	grid-template-columns: 25vw 25vw 25vw;
+	grid-template-rows: 25vw 25vw 25vw;
+	width: 100vw;
+	margin: 0 10%;
+	text-align: center;
 }
 
+#recsList h2{
+	color: black;
+	background-color: #3cd474;
+	height: 1.5em;
+	opacity: 0.8;
+	border-radius: 8px;
+}
+
+ul {
+	list-style: none;
+}
+
+li{
+	border: 2px solid #F5B871;
+	border-radius: 10px;
+	margin: 10px;
+}
 
 p{
 	/* display: flex;
 	flex-wrap: wrap; */
 	padding: .3em;
-	font-size: 1.5em;
+	font-size: 20px;
 	/* align-content: center; */
 }
 
@@ -48,10 +58,12 @@ p{
 	height: 10em;
 	border-radius: 50%;
 	font-size: 1em;
+	margin-top: 30px;
 }
 
 #myButton:hover{
-	background-color: greenyellow;
+	background-color: #3cd474;
+	cursor: pointer;
 }
 
 h2{
@@ -60,3 +72,7 @@ h2{
 	font-family: 'Bungee', cursive;
 }
 
+.fas{
+	font-size: 3em;
+	margin-left: 20px;
+}
