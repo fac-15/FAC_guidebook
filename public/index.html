@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FAC Guidebook</title>
+    <link rel="stylesheet" type="text/css" href="./public/main.css">
 </head>
 <body>
-  <p>Let's go eat!</p>
-  <script type="text/javascript" src="./app.js"></script>
+  <h1>Let's go eat!</h1>
+
+    <section id="recommendations">
+      <p>List of recommendations:</p>
+      <ul id="recsList">
+
+      </ul>
+      <button onclick="window.location.href='./public/form.html'" id="myButton" class="float-left submit-button" > Add your own recommendation</button>
+    </section>
+    
+    <script type="text/javascript" src="./public/js/request.js"></script>
+    <script type="text/javascript" src="./public/js/app.js"></script>
+
 </body>
 </html>
