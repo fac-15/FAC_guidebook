@@ -10,7 +10,7 @@ As a user I want to be able to:
 - Add a recommendation for a restaurant/cafe/pub in the area
 - Review/comment about existing recommendations 
 
-## How to run our project
+## How to run our project 🎉
 
 npm i 
 
@@ -21,7 +21,7 @@ npm start to run server
 
 open localhost:5000
 
-party
+party 👽
 
 
 ### Stretch goals:
