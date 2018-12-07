@@ -1,8 +1,6 @@
 # FAC_guidebook 🍔
 
 An app for food and drinks recommendations around Finsbury Park!
-![image](https://user-images.githubusercontent.com/36998110/49652587-5d8ea500-fa2a-11e8-8ae2-c0eb12c4df74.png)
-![image](https://user-images.githubusercontent.com/36998110/49652462-038ddf80-fa2a-11e8-806b-1edb0300b1bd.png)
 
 
 [![Build Status](https://travis-ci.org/fac-15/FAC_guidebook.svg?branch=staging)](https://travis-ci.org/fac-15/FAC_guidebook)
