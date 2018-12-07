@@ -8,8 +8,8 @@ tape("is tape working IN TEST_DB", t => {
 });
 
 tape("test getData function to get a name of restaurant", t => {
-  dbBuild(function(err, res) {
-    if (err) return console.log("ERROR IN DBBUILD: " + err);
+  dbBuild(function(error, response) {
+    if (error) return console.log("ERROR IN DBBUILD: " + error);
     getData.getRestData(function(err, res) {
       if (err) return console.log("ERROR IN GETDATA: " + err);
       t.equals(
@@ -23,8 +23,8 @@ tape("test getData function to get a name of restaurant", t => {
 });
 
 tape("test getData function to get address of restaurant", t => {
-  dbBuild(function(err, res) {
-    if (err) return console.log("ERROR IN DBBUILD: " + err);
+  dbBuild(function(error, response) {
+    if (error) return console.log("ERROR IN DBBUILD: " + error);
     getData.getRestData(function(err, res) {
       if (err) return console.log("ERROR IN GETDATA: " + err);
       t.equals(
