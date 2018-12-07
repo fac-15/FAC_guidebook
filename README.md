@@ -1,4 +1,4 @@
-# FAC_guidebook 🍔
+# FAC_guidebook 🍔(v) (vg) (gf)
 
 An app for food and drinks recommendations around Finsbury Park!
 
@@ -51,13 +51,24 @@ user_id INTEGER REFERENCES users(id)
 
 ## What we learned: Day 2:
 
-With our real database and our test database, we needed to know how to switch between the two: 
+1.With our real database and our test database, we needed to know how to switch between the two: 
 
 ```
 "test": "node src/test/test_server.js | tap-spec && NODE_ENV=test node src/test/test_db.js | tap-spec",
 ```
 An environment variable!
 
+2. How to add a new column to table. Amended the build.js file 
+
+3. You can't export your dbBuilder function if it has this:
+
+```dbConnection.end(() => {
+//         console.log("connection closed");
+//       });
+```
+   
+   we think??
+   
 ## Issues Raised: 👺
 
 1. Usability: Should redirect back to homepage after submitting form.
@@ -89,18 +100,3 @@ An environment variable!
 - Link SQL tables - use the posts table in order to link between unique restaurants and unique users
 - This would give us loads of amazing functionality - like filtering recommendations by user, or recognising users that already exist or places that have already been submitted, and not creating duplicates in our tables...
 
-
-
-### Notes
-
-IN DB_BUILD.JS - if you still have:
-
-```dbConnection.end(() => {
-//         console.log("connection closed");
-//       });
-```
-
-does this mean that you can't export the dbBuilder function? (and therefore can't require it in your tests eventually)? this seemed to be the case 
-
-TRYING TO ADD A NEW COLUMN TO A TABLE
- we tried to add a review column to our restaurant table... didn't seem to work! why!!!
