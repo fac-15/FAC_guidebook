@@ -32,6 +32,7 @@ party 👽
 - Look at google maps to see the location of the venue
 - Directly make booking to the specific restaurant/cafe/pub
 - Viewing all the recommendations made by a specific user 
+- Link SQL tables - use the posts table in order to link between unique restaurants and unique users
 
 <img src='https://user-images.githubusercontent.com/16784959/49526129-1926cc00-f8a7-11e8-92bc-2d746b529dc1.jpg' width="700" height="700">
 <img src='https://user-images.githubusercontent.com/36998110/49519226-6fd8d980-f898-11e8-946e-27cb23364835.JPG' width="700" height="700">
