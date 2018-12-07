@@ -4,6 +4,14 @@
   font-size: 1rem;
 }
 
+h1 {
+	text-align: center;
+	padding: 2em;
+	font-family: 'Bungee', cursive;
+	font-size: 3em;
+	background-color: #F5B871;
+}
+
 h2 {
   padding: 0,6em;
   margin-top: 1em;
