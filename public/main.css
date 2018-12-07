@@ -18,8 +18,9 @@ h1 {
 	display: grid;
 	grid-template-columns: 25vw 25vw 25vw;
 	grid-template-rows: 43vw 43vw 43vw;
+	grid-gap: 30px;
 	width: 100vw;
-	margin: 0 8%;
+	margin: 0 3%;
 	text-align: center;
 }
 
@@ -84,4 +85,8 @@ h2{
 	font-size: 3em;
 	margin-left: 20px;
 	margin-top: 200px;
+}
+
+.fa-arrow-circle-right{
+	margin-right: 20px;
 }
