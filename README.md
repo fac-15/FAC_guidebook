@@ -2,7 +2,7 @@
 
 An app for food and drinks recommendations around Finsbury Park!
 
-Put screenshot of our app here!!
+
 
 [![Build Status](https://travis-ci.org/fac-15/FAC_guidebook.svg?branch=staging)](https://travis-ci.org/fac-15/FAC_guidebook)
 
