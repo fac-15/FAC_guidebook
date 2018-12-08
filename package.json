@@ -2,7 +2,7 @@
   "name": "FAC_guidebook",
   "version": "1.0.0",
   "description": "## User Stories",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "node src/test/test_server.js | tap-spec && NODE_ENV=test node src/test/test_db.js | tap-spec",
     "start": "node src/server.js"
